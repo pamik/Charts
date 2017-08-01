@@ -281,7 +281,7 @@ open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
                 {
                     guard let e = dataSet.entryForIndex(j) as? CandleChartDataEntry else { break }
                     
-                    pt.x = CGFloat(e.x)
+                    pt.x = CGFloat(e.x) + dataSet.xOffset //Pavel Mikunda - offset
                     pt.y = CGFloat(e.high * phaseY)
                     pt = pt.applying(valueToPixelMatrix)
                     

@@ -257,4 +257,8 @@ public protocol IChartDataSet
     
     /// - returns: `true` if this DataSet is visible inside the chart, or `false` ifit is currently hidden.
     var isVisible: Bool { get }
+    
+    /// The value label x-offset
+    var xOffset: CGFloat { get set }   //Modified by Pavel Mikunda
+
 }

@@ -180,7 +180,7 @@ open class BubbleChartRenderer: BarLineScatterCandleBubbleRenderer
                     
                     let valueTextColor = dataSet.valueTextColorAt(j).withAlphaComponent(CGFloat(alpha))
                     
-                    pt.x = CGFloat(e.x)
+                    pt.x = CGFloat(e.x) + dataSet.xOffset //Pavel Mikunda - offset
                     pt.y = CGFloat(e.y * phaseY)
                     pt = pt.applying(valueToPixelMatrix)
                     

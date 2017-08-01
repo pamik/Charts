@@ -421,6 +421,9 @@ open class ChartBaseDataSet: NSObject, IChartDataSet
         
         return copy
     }
+    
+    open var xOffset: CGFloat = 0.0   //Modified by Pavel Mikunda
+
 }
 
 

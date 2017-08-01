@@ -577,7 +577,7 @@ open class LineChartRenderer: LineRadarRenderer
                                 dataSetIndex: i,
                                 viewPortHandler: viewPortHandler),
                             point: CGPoint(
-                                x: pt.x,
+                                x: pt.x + dataSet.xOffset, //Modified by Pavel Mikunda
                                 y: pt.y - CGFloat(valOffset) - valueFont.lineHeight),
                             align: .center,
                             attributes: [NSFontAttributeName: valueFont, NSForegroundColorAttributeName: dataSet.valueTextColorAt(j)])

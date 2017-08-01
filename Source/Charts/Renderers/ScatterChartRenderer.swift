@@ -147,7 +147,7 @@ open class ScatterChartRenderer: LineScatterCandleRadarRenderer
                 {
                     guard let e = dataSet.entryForIndex(j) else { break }
                     
-                    pt.x = CGFloat(e.x)
+                    pt.x = CGFloat(e.x) + dataSet.xOffset //Pavel Mikunda - offset
                     pt.y = CGFloat(e.y * phaseY)
                     pt = pt.applying(valueToPixelMatrix)
                     
